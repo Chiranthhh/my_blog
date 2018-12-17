@@ -9,7 +9,10 @@
         <div class="container">
           <h1 class="display-3">The World of Sports</h1>
           <p>Get all the news and information of all sports across the world.</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+         	{% if session.logged_in == NULL %}
+         		<a href="/register" class="btn btn-primary btn-lg">Register</a>
+         		<a href="/login" class="btn btn-success btn-lg">Login</a>
+         	{% endif %}
         </div>
       </div>
 
